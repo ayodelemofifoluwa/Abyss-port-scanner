@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abyss-scanner"
+version = "1.0.0"
+description = "An educational, nmap-inspired TCP/UDP port scanner with a web dashboard"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "flask>=3.0",
+]
+
+[project.optional-dependencies]
+syn = ["scapy>=2.5"]
+
+[project.scripts]
+abyss-cli = "abyss.cli:main"
+abyss-web = "abyss.web.app:run_web"
+
+[tool.setuptools.packages.find]
+include = ["abyss*"]

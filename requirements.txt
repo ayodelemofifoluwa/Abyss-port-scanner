@@ -1,0 +1,9 @@
+flask>=3.0
+
+# Optional, only needed for --engine syn (raw SYN scanning):
+# scapy>=2.5
+
+# Optional - enables real rate limiting on /scan and /discover-subnet.
+# The app runs fine without it (degrades gracefully to no rate limiting),
+# but install it for the real protection:
+# flask-limiter>=3.5
